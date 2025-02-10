@@ -9,7 +9,7 @@ import Navbar from './components/Navbar';
 
 const App = () => {
 	return (
-		<div data-theme="dracula">
+		<div data-theme="synthwave">
 			{<Navbar />}
 			<Router>
 				<Routes>
