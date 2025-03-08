@@ -1,0 +1,62 @@
+.mainContainer{
+	background-color: #09AFF0;
+	display: flex;
+	justify-content: space-around;
+	height: 100vh;
+}
+
+.leftDiv{
+	padding: 250px 0;
+	width: 30%;
+}
+
+.rightDiv{
+	width: 30%;
+	position: relative;
+}
+
+.paddind{
+	padding: 15px 0;
+}
+
+#svg1{
+	position: absolute;
+	left: 150px;
+	top: 300px;
+}
+
+#svg2{
+	position: absolute;
+	left: 200px;
+	top: 50px;
+}
+
+#svg3{
+	position: absolute;
+	left: 0px;
+	top: 200px;
+}
+
+#svg4{
+	position: absolute;
+	left: 340px;
+	top: 250px;
+}
+
+#svg5{
+	position: absolute;
+	left: 0px;
+	top: 450px;
+}
+
+#svg6{
+	position: absolute;
+	left: 350px;
+	top: 500px;
+}
+
+#svg7{
+	position: absolute;
+	left: 150px;
+	top: 600px;
+}
