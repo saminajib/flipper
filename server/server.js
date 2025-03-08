@@ -1,7 +1,7 @@
 import express from 'express';
 import register from './routes/register-user.js';
 import login from './routes/login-user.js';
-import reset from './routes/reset-password.js'
+import reset from './routes/reset-password.js';
 import cors from 'cors';
 
 const app = express();

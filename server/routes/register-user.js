@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import sendMail from '../utils/send-mail.js';
 import crypto from 'crypto';
-import connectMongo from '../utils/connect-mongo.js';
+import {hashPassword, comparePassword} from '../utils/encrypt-password.js';
 
 dotenv.config();
 
@@ -17,6 +17,8 @@ const generateVerificationToken = () =>
 //function to add user, defaults to unverified
 const addUser = async (collection, firstName, lastName, email, username, password) =>
 {
+    const passwordHash = await hashPassword(password);
+
     const token = generateVerificationToken();
 
     const newUser = {
@@ -24,7 +26,7 @@ const addUser = async (collection, firstName, lastName, email, username, passwor
         lastName: lastName,
         email: email,
         username: username,
-        password: password,
+        password: passwordHash,
         verified: false,
         token: token,
         dateCreated: new Date()

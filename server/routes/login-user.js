@@ -1,6 +1,7 @@
 import express from 'express';
 import sendMail from '../utils/send-mail.js';
 import connectMongo from '../utils/connect-mongo.js';
+import {hashPassword, comparePassword} from '../utils/encrypt-password.js';
 
 const router = express.Router();
 
@@ -11,8 +12,13 @@ router.post('/login', async(req, res) => {
 
     const {email, password} = req.body;
 
+    const passwordHash = await hashPassword(password);
+
     try{
-        const user = await collection.findOne({email, password});
+
+        const user = await collection.findOne({email, passwordHash});
+        //const verified = await comparePassword(password, passwordHash);
+
         if(user){
             //if user isnt verified, resend verification email
             if(user.verified === false){
