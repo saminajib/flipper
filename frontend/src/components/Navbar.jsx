@@ -3,7 +3,7 @@ import styles from '../styles/Navbar.module.css'
 
 const Navbar = () => {
 	return (
-		<div className={`navbar bg-base-100 sticky top-0 ${styles.navColor}`}>
+		<div className={`navbar bg-base-100 sticky top-0 px-20 py-5 ${styles.navColor}`}>
 			<div className="navbar-start">
 				<div className="dropdown">
 					<div
@@ -45,27 +45,27 @@ const Navbar = () => {
 						</li>
 					</ul>
 				</div>
-				<a className="btn btn-ghost text-xl">SocialStream</a>
+				<a className="btn btn-ghost text-3xl">SocialStream</a>
 			</div>
 			<div className="navbar-center hidden lg:flex">
 				<ul className="menu menu-horizontal px-1">
 					<li>
-						<a className="text-xl">Pricing</a>
+						<a className="text-3xl">Pricing</a>
 					</li>
 					<li>
-						<a className="text-xl">Features</a>
+						<a className="text-3xl">Features</a>
 					</li>
 					<li>
-						<a className="text-xl">Platforms</a>
+						<a className="text-3xl">Platforms</a>
 					</li>
 					<li>
-						<a className="text-xl">FAQ</a>
+						<a className="text-3xl">FAQ</a>
 					</li>
 				</ul>
 			</div>
 			<div className="navbar-end">
-				<a className="btn btn-outline btn-lg bg-transparent border-none text-white">Log in</a>
-				<a className="btn btn-lg bg-secondary border-none text-white">Sign Up</a>
+				<a className="btn btn-ghost btn-lg text-3xl">Log in</a>
+				<a className="btn btn-lg btn-secondary border-none text-white text-3xl">Sign Up</a>
 			</div>
 		</div>
 	);

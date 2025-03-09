@@ -6,18 +6,15 @@ const Hero = () => {
 			<div className={styles.mainContainer}>
 				<div className={styles.leftDiv}>
 					<p
-						className={`text-5xl text-white w-128 ${styles.paddind}`}
+						className={`text-6xl text-white max-w-[440px] font-bold ${styles.paddind}`}
 					>
-						Your all in-one-creator toolkit for posting
+						Your all-in-one creator toolkit for posting
 					</p>
-					<p className={`text-sm text-white w-128 ${styles.paddind}`}>
+					<p className={`text-sm text-white max-w-64 ${styles.paddind}`}>
 						"Post everywhere, effortlessly. One platform, all your
-						scoials, in seconds!"
+						socials, in seconds!"
 					</p>
-					<button className="btn btn-secondary">Try for free</button>
-					<p className={`text-sm text-white w-128 ${styles.paddind}`}>
-						Reviews will go here
-					</p>
+					<button className="btn btn-secondary btn-lg rounded-full text-3xl px-12">Try for free</button>
 				</div>
 				<div className={styles.rightDiv}>
 					<svg
